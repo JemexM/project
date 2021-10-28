@@ -56,24 +56,24 @@
             }
         </style>
     </head>
-    <body onload="displayclocktime()">
+    <body  onload="dct()">
         <div class="container">
             <div class="content">
                 <h1>Fun Under The Sun</h1>
-                <span id="clocktime"></span>
-                <a href="login.html" target="_self">Login</a>
+                <span id="ct"></span>
+                <a href="login.html" target="_blank">Login</a>
             </div>
         </div>
         <script>
-            function displayclock() {
+            function dc() {
                 var refresh=1000; // Refresh rate in milli seconds
-                mytime=setTimeout('displayclocktime()',refresh)
+                mytime=setTimeout('dct()',refresh)
             }
 
-            function displayclocktime() {
+            function dct() {
                 var Mydate = new Date()
-                document.getElementById('clocktime').innerHTML = Mydate;
-                displayclock()
+                document.getElementById('ct').innerHTML = Mydate;
+                dc()
             }
             
         </script>
