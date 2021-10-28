@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                font-family: 'Poppins', sans-serif;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #2d142c;
+            }
+            .content{
+                overflow: hidden;
+                max-width: 800px;
+                padding: 100px 50px;
+                background-color: #c72c41;
+                box-shadow: 0 5px 15px rgba(0,0,0,.5);
+                backdrop-filter: blur(5px);
+                border-radius: 50px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+            label {
+                text-align: left;
+                color: white;
+                font-size: 18px;
+                line-height: 2.5;
+            }
+            input[type="submit"]{
+                margin-top: 30px;
+                padding: 10px;
+                width: 100px;
+                border-radius: 10px;
+                border: none;
+                font-size: 1rem;
+                background-color: #45cc72;
+            }
+            input[type="submit"]:hover{
+                opacity: 0.5;
+            }
+            .input {
+                font-size: 16px;
+                border-radius: 50px;
+                padding: 10px;
+                width: 350px;
+                outline: none;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <form>
+                    <label>Username</label>
+                    <input class="input" type="text" name="Username" id="username" required>
+                    <label>Password</label>
+                    <input class="input" type="password" name="Password" id="password" maxlength="15" required>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fun under the Sun</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                font-family: 'Poppins', sans-serif;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background:url(https://source.unsplash.com/mXpuTdf56FM/) no-repeat;
+                background-size:cover;
+                background-position:bottom;
+            }
+            .content {
+                display: inherit;
+                position: relative;
+                flex-direction: column;
+                line-height: 2;
+                align-items: inherit;
+                text-align: center;
+                overflow: hidden;
+                max-width: 800px;
+                padding: 100px 50px;
+                box-shadow: 0 5px 15px rgba(0,0,0,.5);
+                backdrop-filter: blur(5px);
+            }
+            span {
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+            a {
+                background-color: #004d13;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px 50px;
+                color: white;
+                border-radius: 5px;
+            }
+            a:hover {
+                opacity: .8;
+            }
+            h1 {
+                font-size: 42px;
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body onload="displayclocktime()">
+        <div class="container">
+            <div class="content">
+                <h1>Fun Under The Sun</h1>
+                <span id="clocktime"></span>
+                <a href="login.html" target="_blank">Login</a>
+            </div>
+        </div>
+        <script>
+            function displayclock() {
+                var refresh=1000; // Refresh rate in milli seconds
+                mytime=setTimeout('displayclocktime()',refresh)
+            }
+
+            function displayclocktime() {
+                var Mydate = new Date()
+                document.getElementById('clocktime').innerHTML = Mydate;
+                displayclock()
+            }
+            
+        </script>
+    </body>
+</html>
